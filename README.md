@@ -1,6 +1,6 @@
 # Streamroot-test
 
-<h2>Foreward</h2>
+<h2>Foreword</h2>
 Although I was very happy and excited to work on this test due to my interest for data science and computing and also to my motivation to do this internship, I was only able to spend very limited time on this assignement. Indeed, having several large exams next week, I unfortunately had to prioritise my revisions. This being said, I hope this study will be satisfactory as I believe I still managed to extract some relevant information from the data. To do so, I wrote a (very ugly as it was quickly written) MATLAB script which can be found on this repository.
 
 <h2>Technology choices</h2>
