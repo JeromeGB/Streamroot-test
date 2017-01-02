@@ -22,6 +22,11 @@ clear temp
 l=1; k=1;
 j=ones(1,9);
 u=1; m=1; n=1;
+Stream2ISP=zeros(1,3);
+Stream3ISP=zeros(1,3);
+Stream2Browser=zeros(1,2);
+Stream3Browser=zeros(1,2);
+
 for i=1:length(browser)
     if strcmp(browser(i),'Iron')==1
         Iron.isp(l,1)=isp(i);
@@ -77,6 +82,18 @@ for i=1:length(browser)
             stream2.cdn(j(2),1)=cdn(i);
             stream2.p2p(j(2),1)=p2p(i);
             j(2)=j(2)+1;
+            if strcmp(isp(i),'Arange')==1
+                Stream2ISP(1)=Stream2ISP(1)+1;
+            elseif strcmp(isp(i),'BTP')==1
+                Stream2ISP(2)=Stream2ISP(2)+1;
+            else
+                Stream2ISP(3)=Stream2ISP(3)+1;
+            end
+            if strcmp(browser(i), 'EarthWolf')==1
+                Stream2Browser(1)=Stream2Browser(1)+1;
+            else
+                Stream2Browser(2)=Stream2Browser(2)+1;
+            end
         case 3
             stream3.browser(j(3),1)=browser(i);
             stream3.connected(j(3),1)=connected(i);
@@ -84,6 +101,18 @@ for i=1:length(browser)
             stream3.cdn(j(3),1)=cdn(i);
             stream3.p2p(j(3),1)=p2p(i);
             j(3)=j(3)+1;
+            if strcmp(isp(i),'Arange')==1
+                Stream3ISP(1)=Stream3ISP(1)+1;
+            elseif strcmp(isp(i),'BTP')==1
+                Stream3ISP(2)=Stream3ISP(2)+1;
+            else
+                Stream3ISP(3)=Stream3ISP(3)+1;
+            end
+             if strcmp(browser(i), 'EarthWolf')==1
+                Stream3Browser(1)=Stream3Browser(1)+1;
+            else
+                Stream3Browser(2)=Stream3Browser(2)+1;
+            end
         case 4
             stream4.browser(j(4),1)=browser(i);
             stream4.connected(j(4),1)=connected(i);
@@ -190,3 +219,8 @@ Ms(9)=AvgStream9*(1-sum(stream9.connected)/length(connected));
 Mb=Mb./max(Mb);
 Mi=Mi./max(Mi);
 Ms=Ms./max(Ms);
+Stream2ISP=Stream2ISP./sum(Stream2ISP);
+Stream3ISP=Stream3ISP./sum(Stream3ISP);
+Stream2Browser=Stream2Browser./sum(Stream2Browser);
+Stream3Browser=Stream3Browser./sum(Stream3Browser);
+Viewers=[length(stream1.browser) length(stream2.browser) length(stream3.browser) length(stream4.browser) length(stream5.browser) length(stream6.browser) length(stream7.browser) length(stream8.browser) length(stream9.browser)];
