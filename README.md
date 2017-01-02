@@ -40,7 +40,7 @@ My data-driven recommendations from this quick analysis would therefore be, in o
   <li>Try to work with the ISPs to understand why the performance is increased with Fro. However, it is diffcult to understand if there is simply a correlation (due to geography for example) or if this correlation also implies a causality (infrastructure, protocols etc).</li>
 </ol>
 
-<h2>Limits and improvements</h2>
+<h2>Limitations and improvements</h2>
 As mentioned previously, this study was done in a very limited time, and therefore restricted to the most basic information that can be extracted from the data set. Indeed, while we have identified which parameters influenced performance, we have not studied how the parameters influenced each other (except very superficially for streams 2 and 3). For instance, with more time I would try to see if any pattern could be identified regarding the influence ISPs or browsers on performance. This would be particularly relevant for geographically locked content for example, as the performance of a stream in a country could be vastly different to the performance of a similar stream in a different country due to the differences in ISPs.
 
 I would also have enjoyed exploring MATLAB's Neural Clustering or Pattern Recognition app, although I am not certain any meaninful results could have been obtained from it - but being prepared for unexpectede correlations. Indeed, neural networks are probably going to be increasingly important in data science and I would be curious to see how they could be used for 'simple' data treatment examples such as this one.
