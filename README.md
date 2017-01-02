@@ -3,7 +3,7 @@
 <h2>Foreword</h2>
 Although I was very happy and excited to work on this test due to my interest for data science and computing and also to my motivation to do this internship with your company, I was only able to spend very limited time on this assignement. Indeed, having several large exams next week, I unfortunately had to prioritise my revisions. This being said, I believe I still managed to extract some relevant information from the data. To do so, I wrote a hasted (syntax could be much improved) MATLAB script which can be found on this repository.
 
-<h2>Technology choices</h2>
+<h2>Tech choices</h2>
 I chose MATLAB to explore the data given in this test. Indeed, it is the language and ecosystem I am the most familiar with, and it has useful features for analysing data such as many matrix-related built in functions. Also, the .mat containers allow to open the csv file once, store the relevant information in different matrices and vectors, which can then directly be re-opened in MATLAB, making it quicker to analyse the file many times. Also, it offers many tools to visualise the data quickly (graphs etc). Finally, with more time, I would have liked to try the neural networking capabilities offered by MATLAB, although I am not certain it would be relevant for this specific example.
 
 <h2>Exploration approach</h2>
@@ -45,4 +45,4 @@ As mentioned previously, this study was done in a very limited time, and therefo
 
 I would also have enjoyed exploring MATLAB's Neural Clustering or Pattern Recognition app, although I am not certain any meaninful results could have been obtained from it - but being prepared for unexpectede correlations. Indeed, neural networks are probably going to be increasingly important in data science and I would be curious to see how they could be used for 'simple' data treatment examples such as this one.
 
-With more time, I would also clean up my code to make it more efficient, elegant and readable, and would add more comments for increased redability.
+With more time, I would also clean up my code to make it more efficient, elegant and readable, and would add more comments for increased redability. Finally, if the analysis had to be repeated many times, I would consider writing the script in a compiled language that would be much faster than MATALB that can be quite slow.
