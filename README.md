@@ -33,7 +33,7 @@ This result however is also slightly confusing. If we extrapolate the similarity
 <img src="http://i.imgur.com/Krglkyi.png" width="400" height="300">
 <img src="http://i.imgur.com/taozpfW.png" width="400" height="300">
 
-It is clear that the proportion of ISPs is therefore not so consistent for all streams. It is therefore still possible that the streams themselves are the source of most variations in performance. A more thourough analysis, for all streams, would be needed to determine the true impact of the browser and the ISP on performance.
+It is clear that the proportion of ISPs is not so consistent for all streams. It is therefore still possible that the streams themselves are the source of most variations in performance. A more thourough analysis, for all streams, would be needed to determine the true impact of the browser and the ISP on performance.
 
 I also realised that stream 3 had twice as many viewers as stream 2. Therefore I tried to identify if there was a correlation between number of viewers and performance. As visible on the following figure, no such trend can be seen in our data. The number of viewers can therefore be discarded as a cause for bad performance.
 
