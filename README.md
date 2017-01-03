@@ -21,27 +21,34 @@ The results I obtained appear interestingly contrasted:
 
 <img src="http://i.imgur.com/N5hLqYw.png" width="650" height="450">
 
-To try to understand if the performance of a stream was related to the proportion of ISPs or web browsers used by viewers, I compared these metrics for the best performing stream (2) and the worse performing stream (3). As seen in the following figures, the proportions were almost identical in both cases. This suggests that the performance variation from stream to stream is only due to the stream itself, and not other parameters. It is therefore certain that the biggest source of performance difference is the stream itself.
+To try to understand if the performance of a stream was related to the proportion of ISPs or web browsers used by viewers, I compared these metrics for the best performing stream (2) and the worse performing stream (3). As seen in the following figures, the proportions were almost identical in both cases. This suggests that the performance variation from stream to stream is only due to the stream itself, and not other parameters. It is therefore certain that the biggest source of performance difference is the stream itself. 
 
 <img src="http://i.imgur.com/dkTDU1H.png" width="400" height="300">
 <img src="http://i.imgur.com/vm7jbtA.png" width="400" height="300">
 <img src="http://i.imgur.com/CRXaVnr.png" width="400" height="300">
 <img src="http://i.imgur.com/4PTxYVd.png" width="400" height="300">
 
-However, I did realise that stream 3 had twice as many viewers as stream 2. Therefore I tried to identify if there was a correlation between number of viewers and performance. As visible on the following figure, no such trend can be seen in our data. The number of viewers can therefore be discarded as a cause for bad performance.
+This result however is also slightly confusing. If we extrapolate the similarity in proportion of ISPs and browsers for all streams, the performance differences within browsers and ISPs should not exist. To try to see if the streams were indeed equally distributed for all ISPs, I decided to compare the traffic for the two ISPs which had the closest merit indices, Arange and BTP (on the graph 'dataX' corresponds to stream n°X).
+
+<img src="http://i.imgur.com/Krglkyi.png" width="400" height="300">
+<img src="http://i.imgur.com/taozpfW.png" width="400" height="300">
+
+It is clear that the proportion of ISPs is therefore not so consistent for all streams. It is therefore still possible that the streams themselves are the source of most variations in performance. A more thourough analysis, for all streams, would be needed to determine the true impact of the browser and the ISP on performance.
+
+I also realised that stream 3 had twice as many viewers as stream 2. Therefore I tried to identify if there was a correlation between number of viewers and performance. As visible on the following figure, no such trend can be seen in our data. The number of viewers can therefore be discarded as a cause for bad performance.
 
 <img src="http://i.imgur.com/sRpOoA1.png" width="650" height="450">
 
 My data-driven recommendations from this quick analysis would therefore be, in order of priority:
 <ol>
-  <li>Try to identify what causes the dramatic drops in performance for streams 3 and 4 (bit rate? codec?). </li>
+  <li>Try to identify what causes the dramatic drops in performance for streams 3 and 4 (length? resolution? bit rate? codec?). </li>
   <li> Work on optimising the streams to give them properties closer to streams 1,2 and 9. However, it is possible that some of this performance loss is due to the nature of the streams (resolution/frames per second) which might not be easily changed.</li>
-  <li>Increase the performance with the Iron web browser. (My knowledge of video streaming is very limited, so I would not really know what could cause this variation in performance, although I suppose it could perhaps be due to the implementation of the video player in the browser).</li>
-  <li>Try to work with the ISPs to understand why the performance is increased with Fro. However, it is diffcult to understand if there is simply a correlation (due to geography for example) or if this correlation also implies a causality (infrastructure, protocols etc).</li>
+  <li>Try to understand what causes why the performance is decreased with Iron (simply a consequence of poor streams being viewed by the users or effect of the browser itself?). (My knowledge of video streaming is very limited, so I would not really know what could cause this variation in performance, although I suppose it could perhaps be due to the implementation of the video player in the browser).</li>
+  <li>Try to work with the ISPs to understand why the performance is increased with Fro (simply a consequence of good streams being viewed by the users or effect of the ISP itself?).</li>
 </ol>
 
 <h2>Limitations and improvements</h2>
-As mentioned previously, this study was done in a very limited time, and therefore restricted to the most basic information that can be extracted from the data set. Indeed, while we have identified which parameters influenced performance, we have not studied how the parameters influenced each other (except very superficially for streams 2 and 3). For instance, with more time I would try to see if any pattern could be identified regarding the influence ISPs or browsers on performance. This would be particularly relevant for geographically locked content for example, as the performance of a stream in a country could be vastly different to the performance of a similar stream in a different country due to the differences in ISPs.
+As mentioned previously, this study was done in a very limited time, and therefore restricted to the most basic information that can be extracted from the data set. Indeed, while we have identified that the stream itself probably has the biggest impact on peer to peer ratio, we have not studied how the parameters influenced each other (except very superficially for streams 2 and 3). With more time I would try to see if any pattern could be identified regarding the influence ISPs or browsers on performance. This would be particularly relevant for geographically locked content for example, as the performance of a stream in a country could be vastly different to the performance of a similar stream in a different country due to the differences in ISPs. However, one must keep in mind that the while the use of a normalised merit index improves the clarity of graphs, it also exagerates the actual differences in performance.
 
 I would also have enjoyed exploring MATLAB's Neural Clustering or Pattern Recognition app, although I am not certain any meaninful results could have been obtained from it - but being prepared for unexpectede correlations. Indeed, neural networks are probably going to be increasingly important in data science and I would be curious to see how they could be used for 'simple' data treatment examples such as this one.
 
