@@ -44,7 +44,7 @@ My data-driven recommendations from this quick analysis would therefore be, in o
   <li>Try to identify what causes the dramatic drops in performance for streams 3 and 4 (length? resolution? bit rate? codec?). </li>
   <li> Work on optimising the streams to give them properties closer to streams 1,2 and 9. However, it is possible that some of this performance loss is due to the nature of the streams (resolution/frames per second) which might not be easily changed.</li>
   <li>Try to understand what causes why the performance is decreased with Iron (simply a consequence of poor streams being viewed by the users or effect of the browser itself?). (My knowledge of video streaming is very limited, so I would not really know what could cause this variation in performance, although I suppose it could perhaps be due to the implementation of the video player in the browser).</li>
-  <li>Try to work with the ISPs to understand why the performance is increased with Fro (simply a consequence of good streams being viewed by the users or effect of the ISP itself?).</li>
+  <li>Try to work understand why the performance is increased with Fro, and hence how the performance can be increased for the other ISPs (simply a consequence of good streams being viewed by the users or effect of the ISP itself?).</li>
 </ol>
 
 <h2>Limitations and improvements</h2>
